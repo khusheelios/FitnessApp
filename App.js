@@ -1,0 +1,345 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
+
+const image = { };
+
+
+
+export default App = () => (
+  <View style={styles.container}>
+    <ImageBackground  source={require('./1.jpg')} style={styles.image}>
+    <Image
+        style={styles.tinyLogo}
+        source={require('./fit-logo-Recovered1.png')}
+      />
+    <Text style={styles.header}>Login to stay fit</Text>
+    <Text style={styles.headerbar}>Save Money With Club Membership Card</Text>
+
+    
+    <View style={styles.SectionStyleUsername}>
+
+    <Image source={require('./email.png')} style={styles.ImageStyle} />
+
+    <TextInput  style={styles.textinput} placeholder="Username" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
+
+    </View>
+
+    <View style={styles.SectionStyle}>
+
+    <Image source={require('./password-(1).png')} style={styles.ImageStyle} />
+
+    <TextInput  style={styles.textinput} placeholder="Password" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
+
+    </View>
+
+    <View style={styles.SectionStyle}>
+
+    <Image source={require('./password.png')} style={styles.ImageStyle} />
+
+    <TextInput  style={styles.textinput} placeholder="Confirm Password" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
+
+    </View>
+   
+   
+    <TouchableOpacity style={styles.buttoncontainer}>
+      <Text style={styles.headerbarButon}>Sign up</Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.buttoncontainerForget}>
+      <Text style={styles.headerbarButonForgot}>Forget password ?</Text>
+    </TouchableOpacity>
+
+
+    <View style={styles.socialbottom}>
+    <TouchableOpacity style={styles.btnLeft}>
+     
+        <Image source={require('./facebook.png')}  style={styles.img}/>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.btn}>
+     
+        <Image source={require('./twitter.png')}  style={styles.img}/>
+    </TouchableOpacity>
+    
+    <TouchableOpacity style={styles.btnRight}>
+     
+        <Image source={require('./google-plus.png')}  style={styles.img}/>
+    </TouchableOpacity>
+    </View>
+
+
+    <View style={styles.bottom}>
+    <TouchableOpacity style={styles.buttoncontainerSignIn}>
+      <Text style={styles.headerbarButonSignIn}>Don't have an account ?sign in Now</Text>
+    </TouchableOpacity>
+
+      </View>
+
+
+
+
+
+    </ImageBackground>
+  </View>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column"
+  },
+  image: {
+    flex: 1,
+  
+    justifyContent: "center",
+    
+  },
+  text: {
+    color: "grey",
+    fontSize: 30,
+    fontWeight: "bold"
+  },
+  tinyLogo: {
+    width: 130,
+    height: 40,
+    alignSelf: 'center',
+    marginTop: 60,
+    
+  },
+  textLabel: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: 'Verdana',
+    marginBottom: 10,
+    color: '#595856'
+},
+header : {
+  fontSize : 20,
+  color : '#f9a717',
+  alignSelf: 'center',
+  marginTop: 50,
+
+},
+headerbar : {
+  fontSize : 10,
+  color : '#fff',
+  alignSelf: 'center',
+  marginTop: 10,
+
+},
+headerbarButon : {
+  fontSize : 18,
+  color : '#fff',
+  alignSelf: 'center',
+  
+
+},
+textinput : {
+  alignSelf : 'center',
+  height : 40,
+  width : 300,
+  paddingLeft : 40,
+  marginBottom: 20,
+  color : '#fff',
+  borderBottomColor: '#f8f8f8',
+  borderBottomWidth : 1,
+  marginTop: 20,
+
+}, 
+buttoncontainer : {
+  height : 46,
+  width : 250,
+  borderRadius : 46,
+  backgroundColor : '#f9a717',
+  paddingVertical: 10,
+  justifyContent: 'center',
+  alignSelf : 'center',
+  marginTop: 25,
+},
+ImageStyle: {
+  padding: 10,
+  margin: 5,
+  height: 25,
+  width: 25,
+  resizeMode : 'stretch',
+  alignItems: 'center'
+},
+passwordContainer: {
+  flexDirection: 'row',
+  borderBottomWidth: 1,
+  borderColor: '#000',
+  paddingBottom: 10,
+  alignSelf : 'center',
+  height : 80,
+  width : 300,
+},
+inputStyle: {
+  flex: 1,
+},
+SectionStyleUsername: {
+  flexDirection: 'row',
+  width : 350,
+  backgroundColor: '#00000000',
+  borderColor: '#00000000',
+  height: 40,
+  alignSelf:'center',
+  marginTop: 40,
+
+ 
+  margin: 10,
+},
+SectionStyle: {
+  flexDirection: 'row',
+  width : 350,
+  backgroundColor: '#00000000',
+  borderColor: '#00000000',
+  height: 40,
+  alignSelf:'center',
+  marginTop: 20,
+
+ 
+  margin: 10,
+},
+ImageStyle: {
+  padding: 10,
+  margin: 5,
+  left : 30,
+  height: 25,
+  width: 25,
+  resizeMode: 'stretch',
+  alignItems: 'center',
+},
+buttoncontainerForget : {
+  height : 40,
+  width : 250,
+  borderRadius : 40,
+  backgroundColor : '#00000000',
+  paddingVertical: 10,
+  justifyContent: 'center',
+  alignSelf : 'center',
+  marginTop: 0,
+},
+headerbarButonForgot : {
+  fontSize : 13,
+  color : '#fff',
+  alignSelf: 'center',
+  
+
+},
+buttoncontainerSignIn : {
+  height : 40,
+  width : 250,
+  borderRadius : 40,
+  backgroundColor : '#00000000',
+  paddingVertical: 10,
+  justifyContent: 'center',
+  alignSelf : 'center',
+  marginBottom: 0,
+},
+headerbarButonSignIn : {
+  fontSize : 13,
+  color : '#fff',
+  alignSelf: 'center',
+  
+
+},
+MainContainer: 
+{
+
+flex: 1,
+backgroundColor : '#00000000',
+// Set content's vertical alignment.
+justifyContent: 'center',
+
+// Set content's horizontal alignment.
+alignItems: 'center',
+
+
+},
+
+  ImageClass:
+  {
+    // Setting up image width.
+    width: 24,
+    alignSelf : 'center',
+    alignItems : 'center',
+    // Setting up image height.
+    height: 24,
+
+  },
+  socialcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent'
+  },
+  absoluteView: {
+    flex: 1,
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent'
+},
+img: {
+  flex: 1,
+  position: 'absolute',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'transparent',
+  height : 36,
+  width:36
+},
+btn: {
+  flex: 1,
+  height:24,
+  width:24,
+  alignItems: 'center',
+  alignSelf: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'transparent'
+},
+btnLeft: {
+  flex: 1,
+  height:24,
+  width:24,
+  left : 85,
+  alignItems: 'center',
+  alignSelf: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'transparent'
+},
+btnRight: {
+  flex: 1,
+  height:24,
+  width:24,
+  left : -85,
+  alignItems: 'center',
+  alignSelf: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'transparent'
+},
+socialbottom: {
+  flex: 1,
+  flexDirection: 'row',
+
+  justifyContent: 'flex-end',
+  marginBottom: -110,
+},
+bottom: {
+  flex: 1,
+  justifyContent: 'center',
+  flexDirection: 'row',
+  marginBottom: -50
+},
+
+});
+
+
+// https://reactnative.dev/docs/layout-props#left,
