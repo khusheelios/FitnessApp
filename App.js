@@ -7,87 +7,89 @@
  */
 
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
+
+
+import { ImageBackground, StyleSheet, Text, View, Image, TextInput, TouchableOpacity, KeyboardAvoidingView ,Keyboard , TouchableWithoutFeedback  } from "react-native";
 
 const image = { };
 
 
-
 export default App = () => (
+
+
+  
   <View style={styles.container}>
+
     <ImageBackground  source={require('./1.jpg')} style={styles.image}>
+      
     <Image
         style={styles.tinyLogo}
         source={require('./fit-logo-Recovered1.png')}
       />
-    <Text style={styles.header}>Login to stay fit</Text>
-    <Text style={styles.headerbar}>Save Money With Club Membership Card</Text>
+    <Text style={styles.header}>Enter OTP</Text>
+    <Text style={styles.headerbar}>We have Send OTP on your Email Id</Text>
 
-    
-    <View style={styles.SectionStyleUsername}>
+    <Text style={styles.headerbarOtp}>Email OTP</Text>
 
-    <Image source={require('./email.png')} style={styles.ImageStyle} />
 
-    <TextInput  style={styles.textinput} placeholder="Username" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
-
-    </View>
-
-    <View style={styles.SectionStyle}>
-
-    <Image source={require('./password-(1).png')} style={styles.ImageStyle} />
-
-    <TextInput  style={styles.textinput} placeholder="Password" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
-
-    </View>
-
-    <View style={styles.SectionStyle}>
-
-    <Image source={require('./password.png')} style={styles.ImageStyle} />
-
-    <TextInput  style={styles.textinput} placeholder="Confirm Password" placeholderTextColor="#fff" underlineColorAndroid={'transparent'} />
-
-    </View>
    
+  <View style={{flex:0.6, justifyContent:'space-between',margin:100,flexDirection:'row',marginTop:35}}>
+
+  <TextInput
+//  onChangeText = {()=> this.setState({pin1 : pin2})}
+  maxLength = {1}
+   style={{backgroundColor:'#f5f4f2', fontWeight:'600', alignSelf:"center",fontSize:20,height:40,width:40,borderRadius:4,padding:10,alignItems:"center",justifyContent:"center",borderColor:"grey",textAlign:"center"}}>
+
+   </TextInput>
+
+   <TextInput
+  // onChangeText = {()=> this.setState({pin2 : pin3})}
+   maxLength = {1}
+   style={{backgroundColor:'#f5f4f2', fontWeight:'600', alignSelf:"center",fontSize:20,height:40,width:40,borderRadius:4,padding:10,alignItems:"center",justifyContent:"center",borderColor:"grey",textAlign:"center"}}>
+     
+   </TextInput>
+
+   <TextInput
+ //  onChangeText = {()=> this.setState({pin3 : pin4})}
+  maxLength = {1}
+   style={{backgroundColor:'#f5f4f2', fontWeight:'600', alignSelf:"center",fontSize:20,height:40,width:40,borderRadius:4,padding:10,alignItems:"center",justifyContent:"center",borderColor:"grey",textAlign:"center"}}>
+     
+   </TextInput>
+
+   <TextInput
+// onChangeText = {()=> this.setState({pin3 : pin4})}
+  maxLength = {1}
+   style={{backgroundColor:'#f5f4f2', fontWeight:'600', alignSelf:"center",fontSize:20,height:40,width:40,borderRadius:4,padding:10,alignItems:"center",justifyContent:"center",borderColor:"grey",textAlign:"center"}}>
+     
+   </TextInput>
+
+  </View>
+
+ 
+
+
+  <View style={styles.socialbottom}>
+  <TouchableOpacity style={styles.buttoncontainer}>
+      <Text style={styles.headerbarButon}>Confirm</Text>
+    </TouchableOpacity>
+
+  </View>
+
    
-    <TouchableOpacity style={styles.buttoncontainer}>
-      <Text style={styles.headerbarButon}>Sign up</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.buttoncontainerForget}>
-      <Text style={styles.headerbarButonForgot}>Forget password ?</Text>
-    </TouchableOpacity>
-
-
-    <View style={styles.socialbottom}>
-    <TouchableOpacity style={styles.btnLeft}>
-     
-        <Image source={require('./facebook.png')}  style={styles.img}/>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.btn}>
-     
-        <Image source={require('./twitter.png')}  style={styles.img}/>
-    </TouchableOpacity>
-    
-    <TouchableOpacity style={styles.btnRight}>
-     
-        <Image source={require('./google-plus.png')}  style={styles.img}/>
-    </TouchableOpacity>
-    </View>
 
 
     <View style={styles.bottom}>
-    <TouchableOpacity style={styles.buttoncontainerSignIn}>
-      <Text style={styles.headerbarButonSignIn}>Don't have an account ?sign in Now</Text>
+
+    <TouchableOpacity style={styles.buttoncontainerForget}>
+      <Text style={styles.headerbarButonForgot}>Resend Otp ?</Text>
     </TouchableOpacity>
 
-      </View>
-
-
-
+    </View>
 
 
     </ImageBackground>
   </View>
+
 );
 
 const styles = StyleSheet.create({
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     width: 130,
     height: 40,
     alignSelf: 'center',
-    marginTop: 60,
+    marginTop: 110,
     
   },
   textLabel: {
@@ -134,6 +136,15 @@ headerbar : {
   marginTop: 10,
 
 },
+headerbarOtp : {
+  fontSize : 15,
+  color : '#fff',
+  alignSelf: 'center',
+  marginTop: 60,
+  fontWeight:  "bold",
+
+},
+
 headerbarButon : {
   fontSize : 18,
   color : '#fff',
@@ -161,7 +172,7 @@ buttoncontainer : {
   paddingVertical: 10,
   justifyContent: 'center',
   alignSelf : 'center',
-  marginTop: 25,
+  marginBottom: -150
 },
 ImageStyle: {
   padding: 10,
@@ -190,7 +201,7 @@ SectionStyleUsername: {
   borderColor: '#00000000',
   height: 40,
   alignSelf:'center',
-  marginTop: 40,
+  marginTop: 30,
 
  
   margin: 10,
@@ -224,7 +235,7 @@ buttoncontainerForget : {
   paddingVertical: 10,
   justifyContent: 'center',
   alignSelf : 'center',
-  marginTop: 0,
+  marginBottom: 0
 },
 headerbarButonForgot : {
   fontSize : 13,
@@ -278,7 +289,8 @@ alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    marginBottom: -600,
   },
   absoluteView: {
     flex: 1,
@@ -329,14 +341,14 @@ socialbottom: {
   flex: 1,
   flexDirection: 'row',
 
-  justifyContent: 'flex-end',
-  marginBottom: -110,
+  justifyContent: 'center',
+  marginBottom: 125,
 },
 bottom: {
   flex: 1,
   justifyContent: 'center',
   flexDirection: 'row',
-  marginBottom: -50
+  marginBottom: 150
 },
 
 });
